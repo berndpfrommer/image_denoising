@@ -1,0 +1,9 @@
+<library path="lib/libdenoiser_nodelet">
+  <class name="image_denoising/DenoiserNodelet"
+         type="image_denoising::DenoiserNodelet"
+         base_class_type="nodelet::Nodelet">
+    <description>
+      nodelet for image denoising
+    </description>
+  </class>
+</library>

@@ -1,0 +1,19 @@
+<launch>
+  <arg name="image" default="/flicker/image"/>
+  <arg name="denoised_image" default="/denoised_image"/>
+  <arg name="filter" default="bilateral"/>
+  <!-- manager nodelet -->
+  <node pkg="nodelet" type="nodelet" name="denoiser"
+	args="manager" output="screen"/>
+
+  <!-- denoiser nodelet -->
+  <node pkg="nodelet" type="nodelet" name="denoiser_nodelet"
+	args="load image_denoising/DenoiserNodelet denoiser"
+	output="screen">
+    <!-- what kind of denoising filter to use -->
+    <param name="filter" value="$(arg filter)"/>
+    <!-- remap input and output images -->
+    <remap from="~image" to="$(arg image)"/>
+    <remap from="~denoised_image" to="$(arg denoised_image)"/>
+  </node>
+</launch>

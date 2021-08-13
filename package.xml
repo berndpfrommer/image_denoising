@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>image_denoising</name>
+  <version>1.0.0</version>
+  <description>package with simple image denoising nodes</description>
+  <maintainer email="bernd.pfrommer@gmail.com">Bernd Pfrommer</maintainer>
+  <license>Apache2</license>
+  <author email="bernd.pfrommer@gmail.com">Bernd Pfrommer</author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+ 
+  <depend>roscpp</depend>
+  <depend>nodelet</depend>
+  <depend>image_transport</depend>
+  <depend>cv_bridge</depend>
+  <depend>dynamic_reconfigure</depend>
+
+  <export>
+    <nodelet plugin="${prefix}/nodelet_plugins.xml"/>
+  </export>
+
+</package>
