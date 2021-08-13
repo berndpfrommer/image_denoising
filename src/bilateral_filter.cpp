@@ -36,10 +36,10 @@ void BilateralFilter::configure(Config & config, int level)
 {
   if (level >= 0) {
     if (config_.sigma_color != config.sigma_color) {
-      ROS_INFO_STREAM("setting sigma_color to " << config_.sigma_color);
+      ROS_INFO_STREAM("setting sigma_color to " << config.sigma_color);
     }
     if (config_.sigma_space != config.sigma_space) {
-      ROS_INFO_STREAM("setting sigma_space to " << config_.sigma_space);
+      ROS_INFO_STREAM("setting sigma_space to " << config.sigma_space);
     }
   }
   config_ = config;
